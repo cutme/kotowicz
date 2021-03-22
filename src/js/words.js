@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 var words = (function(){
 	var words = [
-			'Pomogam',
+			'Pomagam',
 			'Robię',
 			'Siedzę'
 			],
