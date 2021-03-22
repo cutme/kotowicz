@@ -1,0 +1,51 @@
+.o-btn {
+    @extend %anim;
+    display: inline-flex;
+    @extend %flex-xy;
+    @extend %rel;
+    height: 40px;
+    white-space: nowrap;
+    padding: 0 38px 0 15px;
+    font-family: $text;
+    color: $c-black;
+    cursor: pointer;
+   
+    &--major {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        font: {
+            size: rem(18);
+            weight: $bold;
+        }
+    }
+    
+    &--minor {
+        background-color: transparent;
+        border: 2px solid var(--primary-color);
+        font: {
+            size: rem(15);
+            weight: $semibold;
+        }
+        
+        @media ( max-width: $smartphone + px ) {
+        	font-weight: $regular;
+        }
+    }
+    
+    span {
+        width: 100%;
+	}
+}
+
+a.o-btn,
+button.o-btn {
+//    .desktop & {
+    
+        &:hover {
+	        
+        	background-color: var(--primary-color);
+        	color: white;
+        	
+        }
+//    }
+}

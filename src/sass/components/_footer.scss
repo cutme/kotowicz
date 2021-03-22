@@ -1,0 +1,10 @@
+.c-footer {
+    @extend %wrap;
+    margin-bottom: 40px;
+    
+    p {
+        font-size: 10px;
+        line-height: rem(17);
+        color: $c-gray-01;
+    }
+}

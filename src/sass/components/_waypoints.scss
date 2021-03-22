@@ -1,0 +1,25 @@
+.c-waypoints {
+    position: fixed;
+    left: 30px; top: 150px;
+    transform: rotate(90deg);
+    transform-origin: left;
+    width: calc(90vh - 150px);
+    border-bottom: 2px solid $c-gray-02;
+    padding-left: 25px;
+    padding-bottom: 5px;
+    
+    @media ( max-width: $tablet + px ) {
+    	display: none;
+    }
+    
+    p {
+        @extend %abs;
+        @extend %anim;
+        top: -20px;
+        
+        &.is-fadeout {
+            //transform: translateX(-25px);
+            opacity: 0;
+        }
+    }
+}

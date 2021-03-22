@@ -1,0 +1,63 @@
+.c-topbar {
+    @include z-index(topbar);
+    @extend %wrap;
+    @extend %flex;
+    @extend %flex-y;
+    @extend %rel;
+    height: 100px;
+    margin-bottom: 25px;
+    //opacity: 0;
+    
+    .hamburger {
+        transform: scale(.8);
+        transform-origin: right;
+        
+        @media ( max-width: $tablet + px ) {
+        	transform: scale(.6);
+        }
+    }
+    
+    .o-logo {
+        @include z-index(logo);
+        
+        @media ( min-width: $smartphone_portrait + 1px ) {
+        	position: absolute;
+        	top: 50%;
+        	left: 50%;
+        	transform: translate(-50%, -50%);
+        }
+        
+        img {
+            
+            &.default {            
+                .menu-opened & {
+                    display: none;
+                }
+            }
+            
+            &.white {
+                display: none;
+                
+                .menu-opened & {
+                    display: block !important;
+                }
+            }
+        }
+    }
+    
+    .o-social {
+        @include z-index(socialTop);
+        
+        @media ( max-width: $smartphone_portrait + px ) {
+        	display: none;
+        }
+        
+        .menu-opened & {
+            color: white;
+        }
+    }
+    
+    .hamburger {
+        margin: 0 0 0 auto;
+    }
+}

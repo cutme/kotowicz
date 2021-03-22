@@ -1,0 +1,14 @@
+.o-article {
+    
+    em {
+        letter-spacing: -1px;
+        font: {
+            family: $poppins;
+            style: italic;
+        }
+    }
+
+    p {
+        line-height: 1.7em;
+    }
+}

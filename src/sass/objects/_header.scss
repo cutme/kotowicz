@@ -1,0 +1,17 @@
+.o-header {
+   h2 {
+        margin-bottom: 1.2em;
+        
+        @media ( min-width: $tablet_portrait + 1px ) {
+            color: $c-gray-01;        	
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	margin-bottom: .6em;
+        }
+        
+        &:before {
+            content: '- ';
+        }
+    }
+}

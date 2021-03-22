@@ -1,0 +1,25 @@
+html:not(.ie) {
+    &.is-loaded {
+        .anim {
+            transition: all 600ms ease-out;
+            opacity: 0;
+            transform: translate3d(0, 50px, 0);
+            opacity: 0;
+
+            &--visible {
+                transform: translate3d(0, 0, 0);
+                opacity: 1;
+            }
+        }
+    }
+}
+
+
+.u-cover {
+    transition: all 250ms ease-out;
+    opacity: 1;
+    
+    .is-loaded & {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,51 @@
+// Fonts
+
+$telegraf:          'Telegraf', serif;
+$icomoon:           'icomoon';
+$poppins:           'Poppins', sans-serif;
+$text:		        $telegraf;
+
+
+
+
+// Font weights
+
+$extralight:        200;
+$light:             300;
+$regular:           400;
+$medium:            500;
+$semibold:          600;
+$bold:              700;
+$extrabold:         800;
+
+
+$z-index: (
+    hamburger:      60,
+    header:         30,
+	topbar:         60,
+	nav:            50,
+	logo:           60,
+	socialTop:      60
+);
+
+// Paths
+
+$path_img:          '../img';
+$path_fonts:        '../fonts';
+
+
+
+// Default
+
+$base-font-size:	18;
+$base:				1440;
+
+
+
+// RWD
+
+$artboard:             1200;
+$tablet:               1023;
+$tablet_portrait:       768;
+$smartphone:			670;
+$smartphone_portrait:	500;

@@ -1,0 +1,90 @@
+.c-contact {
+    @extend %wrap;
+    margin-bottom: 30px;
+    overflow: hidden;
+
+    .o-cols {
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: block;
+        }
+
+        &__item {
+            @media ( min-width: $tablet_portrait + 1px ) {
+                width: 50%;
+            }
+            
+            &:first-of-type {
+
+                @media ( min-width: $tablet + px ) {
+                	display: flex;
+                	flex-wrap: wrap;
+                }
+                
+                address {
+                    margin-bottom: 50px;
+
+                    @media ( min-width: $tablet_portrait + 1px ) {
+                        margin: auto 0 100px 0;	
+                    }
+                    
+                    a {
+                        &:not([class^="icon-"]) {
+                            @extend %ulink;
+                            
+                            &:before, &:after {
+                                background-color: $c-black;
+                            }
+                        }
+                    }
+    
+                    p {
+                        margin-bottom: .5em;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    padding: {
+                        left: 25px;
+                        top: 120px;
+                    }
+                }
+            }            
+        }
+    }
+    
+    .o-header {
+        max-width: 440px;        
+
+        h3 {
+            @extend %lead--1;
+            @extend %rel;
+            
+            @media ( max-width: $tablet + px ) {
+                margin-bottom: 60px;
+            }
+            
+            &:after {
+                @extend %abs-after; z-index: -1;
+                right: 0; top: calc(100% - 10px);
+                width: 190px;
+                height: 60px;
+                background: {
+                    image: url(../img/contact/underline-1.svg);
+                    repeat: no-repeat;
+                }
+                
+                @media ( max-width: $tablet + px ) {
+                    right: auto;
+                    width: 360px;
+                	height: 40px;
+                	background: {
+                        image: url(../img/contact/underline-1--mobile.svg);
+                    }
+                }
+            }
+            
+        }
+    }
+}

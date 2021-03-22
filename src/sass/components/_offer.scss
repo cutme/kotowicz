@@ -1,0 +1,129 @@
+.c-offer {
+    margin-bottom: 300px;
+
+    @media ( max-width: $base + px ) {
+    	@include responsive-margin-bottom(base(300), rem(0));
+    }
+    
+    @media ( max-width: $tablet + px ) {
+        margin-bottom: 60px;
+    }
+
+    img {
+        &.mobile {
+            @media ( min-width: $smartphone_portrait + 1px ) {
+            	display: none;
+            }
+        }
+        
+        &.desktop {
+            @media ( max-width: $smartphone_portrait + px ) {
+            	display: none;
+            }
+        }
+    }
+    
+    &__nav {
+        margin-bottom: 130px;
+        
+        @media ( max-width: $base + px ) {
+        	@include responsive-margin-bottom(base(130), rem(0));
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	margin-bottom: 40px;
+        }
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            margin-bottom: 30px;
+            padding: {
+            	left: 20px;
+            	right: 20px;
+        	}
+        }
+        
+        .o-header {
+            @extend %wrap;
+            
+            @media ( max-width: $tablet_portrait + px ) {
+            	padding: 0;
+            }
+            
+            h2 {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    padding-left: 340px;   
+                }
+            }
+        }
+        
+        .swiper-slide {
+            @extend %anim;
+            width: auto;
+            font-size: rem(82);
+            line-height: 1em;
+            letter-spacing: -0.05em; 
+            cursor: pointer;
+            color: $c-gray-02;
+            
+            &:hover {
+                &:not(.swiper-slide-active) {
+                    .desktop & {
+                        color: darken($c-gray-02, 10%);
+                    }
+                }
+            }
+            
+            @media ( max-width: $base + px ) {
+            	@include responsive-font(base(87), rem(28));
+            }
+            
+            &.swiper-slide-active {
+                color: $c-black;
+            }
+        }
+    }
+    
+    &__photos {
+        
+        .swiper-slide {
+             @media ( max-width: $smartphone_portrait + px ) {
+            	width: 80%;
+            }
+        }
+        
+        img {
+            width: 100%;
+        }
+    }
+    
+    
+    
+    .swiper-pagination-fraction, 
+    .swiper-pagination-custom, 
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        position: relative;
+        bottom: auto;
+        background-color: $c-gray-02;
+        width: calc(100% - 40px);
+        height: 2px;
+        margin: 25px 20px;
+        display: flex;
+        
+        @media ( min-width: $smartphone_portrait + 1px ) {
+        	display: none;
+        }
+        
+        .swiper-pagination-bullet {
+            flex: 1;
+            background: transparent;
+            width: auto;
+            height: 2px;
+            margin: 0;
+            border-radius: 0;
+            
+            &.swiper-pagination-bullet-active {
+                background: $c-orange;
+            }
+        }
+    }
+}

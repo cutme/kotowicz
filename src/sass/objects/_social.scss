@@ -1,0 +1,27 @@
+.o-social {
+    @extend %flex;
+    
+    li {
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+    
+    [class^="icon-"] {
+        font-size: rem(16);
+        
+        &:before {
+            @extend %anim;
+            display: block;
+        }
+
+        &:hover {
+            .desktop & {
+                &:before {
+                    transform: translateY(-3px);
+                }
+                color: $c-orange;
+            }
+        }
+    }
+}

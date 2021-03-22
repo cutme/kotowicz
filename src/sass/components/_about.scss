@@ -1,0 +1,174 @@
+.c-about {
+    @extend %wrap;
+    
+    &__summary {
+        max-width: 888px;
+        margin: 280px auto 240px auto;
+        
+        @media ( max-width: $base + px ) {
+        	@include responsive-margin-top(base(280), rem(100));
+        	@include responsive-margin-bottom(base(280), rem(100));
+        }
+        
+        @media ( max-width: $tablet + px ) {
+        	margin: 60px auto;
+        }
+
+        h4 {
+            margin-bottom: .4em;
+            font-size: rem(40);
+            line-height: 1.2em;
+            
+            @media ( max-width: $base + px ) {
+            	@include responsive-font(base(40), rem(30));
+            }
+            
+            em {
+                @extend %rel;
+                font-size: rem(38);
+                
+                @media ( max-width: $base + px ) {
+                	@include responsive-font(base(38), rem(28));
+                }
+            }
+        }
+        
+        .o-article {
+            p {
+                font-size: rem(22);
+                
+                @media ( max-width: $base + px ) {
+                	@include responsive-font(base(22), rem(18));
+                }
+            }
+        }
+    }
+
+    .o-cols {
+        
+        @media ( max-width: $tablet_portrait + px ) {
+            display: block;
+        }
+
+        &__item {
+            &:first-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    width: 470px;
+                }
+            }
+            
+            &:last-of-type {
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    width: grid(730, $artboard);
+                }
+            }
+            
+            .o-article {
+                @extend %rel;
+                
+                @media ( min-width: $tablet_portrait + 1px ) {
+                    margin-right: 60px;
+                }
+                
+                @media ( max-width: $tablet_portrait + px ) {
+                	margin-bottom: 40px;
+                }
+        
+                h3 {
+                    
+                    margin-bottom: .5em;
+                    font-size: rem(54);
+                    
+                    @media ( min-width: $tablet_portrait + px ) {
+                    	padding-right: 100px;
+                    }
+        
+                    em {
+                        @extend %rel;
+                        font-size: rem(48);
+                        
+                        &:before {
+                            @extend %abs-after; z-index: -1;
+                            left: 0; top: 0;
+                            width: 247px; height: 55px;
+                            background: {
+                                image: url(../img/about/circle.svg);
+                                size: contain;
+                            }
+                            
+                            
+                        }
+                    }
+                }
+                
+                &:after {
+                    @extend %abs-after;
+                    @extend %abs-x;
+                    top: calc(100% + 30px);
+                    width: 14px; height: 193px;
+                    background: {
+                        image: url(../img/assets/arrow--vert.svg);
+                        repeat: no-repeat;
+                        size: contain;
+                    }
+                    
+                    @media ( max-width: $base + px ) {
+                    	width: grid(14, 470);
+                    }
+                    
+                    @media ( max-width: $tablet_portrait + px ) {
+                    	display: none;
+                    }
+                }
+            }
+        }
+    }
+    
+    .o-photo {
+        position: relative;
+        
+        &:after {
+            @extend %abs-after; z-index: 110;
+            @extend %abs-x;
+            top: calc(86%);
+            width: 14px; height: 193px;
+            background: {
+                image: url(../img/assets/arrow--vert.svg);
+                repeat: no-repeat;
+                size: contain;
+            }
+            
+            @media ( max-width: $base + px ) {
+            	width: grid(14, $tablet_portrait);
+            }
+            
+            @media ( max-width: $smartphone_portrait + px ) {
+            	width: 14px; height: 108px;
+            }
+          
+        }
+        
+        & > img {
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+                height: 100%;
+                width: auto;
+                object-fit: cover;
+            }
+            
+            @media ( max-width: $tablet + px ) {
+            	
+            }
+        }
+        
+        figcaption {
+            right: grid(127, 730);
+            bottom: grid(60, 738);
+            
+            @media ( max-width: $tablet + px ) {
+            	right: 6%;
+            	bottom: 5%;
+            }            
+        }
+    }
+}

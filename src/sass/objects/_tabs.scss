@@ -1,0 +1,26 @@
+.o-tabs {
+    &__content {
+        width: 100%;
+
+        li {
+            
+            @media ( min-width: $tablet_portrait + 1px ) {
+	            display: none;
+            }
+            
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+
+    &__nav {
+        li {
+            cursor: pointer;
+            
+            &.is-active {
+                display: block;
+            }
+        }
+    }
+}

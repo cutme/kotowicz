@@ -1,0 +1,16 @@
+.o-photo {
+    @extend %rel;
+    
+    & > img {
+        @extend %rel;
+    }
+    
+    figcaption {
+        @extend %abs;
+        padding-left: 20px;
+        
+        @media ( max-width: $tablet_portrait + px ) {
+        	display: none;
+        }
+    }
+}
