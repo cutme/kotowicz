@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded',function() {
             breakpoints: {
                 '769': {
                     spaceBetween: 80,
-                    centeredSlides: true,
                     freeMode: true,
                 }
             },            
@@ -33,9 +32,9 @@ document.addEventListener('DOMContentLoaded',function() {
                 }
             },
             pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
+                el: '.swiper-pagination',
+                type: 'progressbar',
+            },
             spaceBetween: 40,
             slidesPerView: 'auto',
             speed: 800,

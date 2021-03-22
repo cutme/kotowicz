@@ -1,3 +1,9 @@
 .o-more {
     white-space: nowrap;
+    
+    &:hover {
+        .desktop & {
+
+        }
+    }
 }

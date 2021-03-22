@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded',function() {
                                 duration: .5, 
                                 opacity: 0,
                                 autoAlpha: 1, 
-                                y: 20,
                                 delay: .1 
                             }) 
                                                    

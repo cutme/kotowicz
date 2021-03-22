@@ -24,6 +24,7 @@
     }
     
     &__nav {
+        @extend %wrap;
         margin-bottom: 130px;
         
         @media ( max-width: $base + px ) {
@@ -43,15 +44,15 @@
         }
         
         .o-header {
-            @extend %wrap;
+//            @extend %wrap;
             
             @media ( max-width: $tablet_portrait + px ) {
-            	padding: 0;
+  //          	padding: 0;
             }
             
             h2 {
                 @media ( min-width: $tablet_portrait + 1px ) {
-                    padding-left: 340px;   
+    //                padding-left: 340px;   
                 }
             }
         }
@@ -82,7 +83,22 @@
             }
         }
     }
+
+    .swiper-pagination {
+        @media ( max-width: $smartphone_portrait + px ) {
+            left: 20px !important;
+            width: calc(100% - 40px) !important;
+        	top: calc(100% - 2px) !important;
+        }
+    }
+
+    .swiper-pagination-progressbar-fill {
+        background-color: $c-orange !important;
+        
+        
+    }
     
+
     &__photos {
         
         .swiper-slide {
@@ -96,9 +112,12 @@
         }
     }
     
+    .swiper-container {
+        padding-bottom: 25px;
+    }
     
-    
-    .swiper-pagination-fraction, 
+  /*
+  .swiper-pagination-fraction, 
     .swiper-pagination-custom, 
     .swiper-container-horizontal > .swiper-pagination-bullets {
         position: relative;
@@ -113,6 +132,8 @@
         	display: none;
         }
         
+        
+        
         .swiper-pagination-bullet {
             flex: 1;
             background: transparent;
@@ -126,4 +147,5 @@
             }
         }
     }
+*/
 }

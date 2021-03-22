@@ -1,12 +1,21 @@
 .c-waypoints {
     position: fixed;
-    left: 30px; top: 150px;
+    left: 30px; top: 125px;
     transform: rotate(90deg);
     transform-origin: left;
-    width: calc(90vh - 150px);
+    width: calc(90vh - 125px);
     border-bottom: 2px solid $c-gray-02;
     padding-left: 25px;
     padding-bottom: 5px;
+    
+    .bar {
+        @extend %anim;
+        position: absolute;
+        left: 0; top: 5px;
+        display: block;
+        width: 0; height: 2px;
+        background-color: $c-black;
+    }
     
     @media ( max-width: $tablet + px ) {
     	display: none;

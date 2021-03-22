@@ -8,9 +8,11 @@ require('./js/init.js');
 require('./js/ismobile.js');
 require('./js/nav.js');
 require('./js/polyfills.js');
+require('./js/scrollprogress.js');
 require('./js/showonscroll.js');
 require('./js/tabs.js');
 require('./js/validate.js');
+require('./js/words.js');
 
 // Images
 
