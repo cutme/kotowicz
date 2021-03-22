@@ -146,6 +146,9 @@
             	width: 14px; height: 108px;
             }
           
+            @media ( min-width: $tablet_portrait + 1px ) {
+            	display: none;
+            }
         }
         
         & > img {
