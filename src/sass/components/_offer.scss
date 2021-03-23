@@ -100,7 +100,8 @@
     
 
     &__photos {
-        
+        @extend %wrap;
+
         .swiper-slide {
              @media ( max-width: $smartphone_portrait + px ) {
             	width: 80%;
