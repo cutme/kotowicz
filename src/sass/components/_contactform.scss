@@ -21,6 +21,14 @@
                 size: contain;
             }
         }
+        
+        &:hover {
+            .desktop & {
+                &:after {
+                    background-image: url(../img/contact/underline-2--blue.svg);
+                }
+            }
+        }
     }
     
     .form-group {

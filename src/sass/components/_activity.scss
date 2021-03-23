@@ -43,6 +43,16 @@
                     }
                 }
             }
+            
+            &:hover {
+                .desktop & {
+                    span {
+                        &:after {
+                            background-image: url(../img/activity/underline--blue.svg);
+                        }
+                    }
+                }
+            }
         }
         
         h3 {
