@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 var words = (function(){
 	var words = [
 			'Pomagam',
-			'Robię',
+			'Działam',
 			'Siedzę'
 			],
 		el = document.querySelector('.verb'),
