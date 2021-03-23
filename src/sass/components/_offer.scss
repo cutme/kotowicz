@@ -25,16 +25,12 @@
     
     &__nav {
         @extend %wrap;
-        margin-bottom: 130px;
+        margin-bottom: 50px;
         
         @media ( max-width: $base + px ) {
-        	@include responsive-margin-bottom(base(130), rem(0));
+        	@include responsive-margin-bottom(base(70), rem(40));
         }
-        
-        @media ( max-width: $tablet + px ) {
-        	margin-bottom: 40px;
-        }
-        
+
         @media ( max-width: $tablet_portrait + px ) {
             margin-bottom: 30px;
             padding: {
@@ -100,6 +96,9 @@
     
 
     &__photos {
+        .swiper-container {
+            padding-bottom: 25px;
+        }
         
         .swiper-slide {
              @media ( max-width: $smartphone_portrait + px ) {
@@ -112,9 +111,7 @@
         }
     }
     
-    .swiper-container {
-        padding-bottom: 25px;
-    }
+    
     
   /*
   .swiper-pagination-fraction, 
