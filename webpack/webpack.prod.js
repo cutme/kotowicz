@@ -79,6 +79,11 @@ module.exports = {
                 to: '../dist',
             	context: 'src'
             },
+            {
+                from: '**/favicon/*',
+                to: '../dist',
+            	context: 'src'
+            },
             ],
         }),
 

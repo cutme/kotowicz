@@ -1,12 +1,25 @@
 .c-topbar {
     @include z-index(topbar);
-    @extend %wrap;
-    @extend %flex;
-    @extend %flex-y;
+    @extend %anim;
+//    @extend %wrap;
+    
     @extend %rel;
+    position: fixed;
+    left: 0; top: 0;
+    width: 100%;
     height: 100px;
-    margin-bottom: 25px;
+    background-color: $c-bg;
+    //margin-bottom: 25px;
     //opacity: 0;
+    
+    &.is-narrow {
+        height: 60px;
+    }
+    
+    .menu-opened & {
+        background-color: $c-menu;
+         
+    }
     
     .hamburger {
         transform: scale(.8);
@@ -26,8 +39,9 @@
         	left: 50%;
         	transform: translate(-50%, -50%);
         }
-        
+     
         img {
+            @extend %anim;
             
             &.default {            
                 .menu-opened & {
@@ -54,6 +68,20 @@
         
         .menu-opened & {
             color: white;
+        }
+    }
+    
+    .o-wrap {
+        @extend %flex;
+        @extend %flex-y;
+        height: 100%;
+    }
+    
+    &.is-narrow {
+        .o-logo {
+            img {
+                width: 150px;
+            }
         }
     }
     

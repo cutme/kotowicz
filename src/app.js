@@ -9,6 +9,7 @@ require('./js/ismobile.js');
 require('./js/nav.js');
 require('./js/polyfills.js');
 require('./js/scrollprogress.js');
+require('./js/scrollpos.js');
 require('./js/showonscroll.js');
 require('./js/tabs.js');
 require('./js/validate.js');

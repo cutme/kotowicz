@@ -35,7 +35,6 @@ document.addEventListener('DOMContentLoaded',function() {
                 el: '.swiper-pagination',
                 type: 'progressbar',
             },
-            spaceBetween: 40,
             slidesPerView: 'auto',
             speed: 800,
             thumbs: {

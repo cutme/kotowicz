@@ -1,6 +1,7 @@
 .c-about {
     @extend %wrap;
-    
+    margin-top: 125px;
+
     &__summary {
         max-width: 888px;
         margin: 280px auto 240px auto;

@@ -12,47 +12,49 @@
 
     .o-article {
         a {
-            @extend %rel;
-            padding-left: 140px;
-
-            &:before {
-                @extend %abs-after;
-                @extend %abs-y;
-                left: 0;
-                width: 112px;
-                height: 14px;
-                background: {
-                    image: url(../img/assets/arrow--horiz.svg);
-                    repeat: no-repeat;
-                    size: contain;
-                }
-            }
-            
-            span {
+            &.o-more {
                 @extend %rel;
-                
-                &:after {
+                padding-left: 140px;
+    
+                &:before {
                     @extend %abs-after;
-                    left: -6px; top: 6px;
-                    z-index: -1;
-                    width: calc(100% + 12px); height: 16px;
+                    @extend %abs-y;
+                    left: 0;
+                    width: 112px;
+                    height: 14px;
                     background: {
-                        image: url(../img/activity/underline.svg);
+                        image: url(../img/assets/arrow--horiz.svg);
                         repeat: no-repeat;
                         size: contain;
                     }
                 }
-            }
-            
-            &:hover {
-                .desktop & {
-                    span {
-                        &:after {
-                            background-image: url(../img/activity/underline--blue.svg);
+                
+                span {
+                    @extend %rel;
+                    
+                    &:after {
+                        @extend %abs-after;
+                        left: -6px; top: 6px;
+                        z-index: -1;
+                        width: calc(100% + 12px); height: 16px;
+                        background: {
+                            image: url(../img/activity/underline.svg);
+                            repeat: no-repeat;
+                            size: contain;
                         }
                     }
                 }
-            }
+                
+                &:hover {
+                    .desktop & {
+                        span {
+                            &:after {
+                                background-image: url(../img/activity/underline--blue.svg);
+                            }
+                        }
+                    }
+                }
+            }            
         }
         
         h3 {

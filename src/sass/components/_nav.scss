@@ -60,41 +60,6 @@
     
     &.is-animated {
         transform: translate3d(-100%, 0, 0);
-        
-/*
-        .c-nav__menu {        
-            ul {            
-                li {
-                    &.is-active {                            
-                        a {
-                            color: white;
-                            
-                            &:before {
-                                opacity: 1;
-                                transform: translate3d(0,0,0);
-                            }
-                        }
-                    }
-
-                    &.open-submenu { 
-                        & > a {
-                            &:after {
-                                transform: translate3d(0, -50%, 0) scaleY(1);
-                            }
-                        }
-
-                        ul {
-                            height: auto;
-                            margin-bottom: 20px;
-                            padding: 10px 0 20px 0;
-                            opacity: 1;
-                            pointer-events: auto;
-                        }
-                    }
-                }
-            }
-        }
-*/
     }
     
     .c-nav {

@@ -11,7 +11,15 @@ html:not(.ie) {
                 opacity: 1;
             }
         }
+        
+        &.no-anim {
+            .anim {
+               transform: translate3d(0, 0, 0) !important;
+            }
+        }
+
     }
+    
 }
 
 
